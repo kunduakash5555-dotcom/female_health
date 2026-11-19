@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lakshmirupa & Mayer Anchal | Seva First Innovation Challenge 2026</title>
+<meta name="description" content="A community-led programme to prevent child marriage and adolescent motherhood in the Sundarbans, West Bengal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="style.css"> -->
+ <style>
+
+:root{
+  --mangrove:#0e3a33; --river:#1c6e7a; --mist:#eaf3f1; --paper:#fbfdfc;
+  --alta:#c2275b; --marigold:#e9a516; --ink:#17302c; --muted:#4d6560;
+  --r:14px;--card:#fff;--head:#0e3a33;--warn:#fff6df; --serif:'Fraunces',Georgia,serif; --sans:'Figtree',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font:400 1.05rem/1.65 var(--sans);color:var(--ink);background:var(--paper)}
+img,svg{display:block;max-width:100%}
+a{color:var(--river)}
+:focus-visible{outline:3px solid var(--marigold);outline-offset:3px}
+.wrap{width:min(1120px,92%);margin-inline:auto}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:99}
+
+/* Navigation */
+.nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;
+  padding:.8rem 4%;background:rgba(14,58,51,.94);backdrop-filter:blur(8px)}
+.brand{font:700 1.15rem var(--serif);color:#fff;text-decoration:none}
+.brand span{color:var(--marigold)}
+.links{display:flex;gap:1.4rem;align-items:center}
+.links a{color:#d6e6e2;text-decoration:none;font-weight:500;font-size:.95rem;padding:.2rem 0;border-bottom:2px solid transparent}
+.links a:hover,.links a.on{color:#fff;border-color:var(--marigold)}
+.links .cta-link{background:var(--marigold);color:#0e3a33;padding:.4rem 1rem;border-radius:99px;border:0}
+.menu-btn{display:none;background:none;border:1px solid #6f9a93;color:#fff;border-radius:8px;padding:.4rem .8rem;font:inherit}
+
+/* Hero */
+.hero{background:var(--mangrove);color:#fff;position:relative;overflow:hidden;padding:clamp(4rem,10vw,8rem) 0 9rem}
+.hero-in{position:relative;z-index:1}
+.tag{color:#a9cdc6;font-size:.95rem;margin-bottom:1.2rem}
+h1{font:700 clamp(2.8rem,8vw,6rem)/1.02 var(--serif);letter-spacing:-.02em;max-width:12ch}
+.lead{max-width:56ch;margin:1.6rem 0 2rem;font-size:1.2rem;color:#d6e6e2}
+.actions{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-block;padding:.8rem 1.5rem;border-radius:99px;font:600 1rem var(--sans);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--marigold);color:#0e3a33}
+.btn.ghost{border-color:#6f9a93;color:#fff}
+.glance{display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:3.2rem}
+.glance dt{font-size:.9rem;color:#a9cdc6}
+.glance dd{font:700 1.9rem var(--serif);color:#fff}
+.waves{position:absolute;left:0;bottom:-1px;width:200%;height:130px;animation:drift 22s linear infinite}
+.waves .w1{fill:var(--river);opacity:.55}.waves .w2{fill:var(--paper)}
+.waves .w1{animation:bob 6s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translateX(-50%)}}
+@keyframes bob{to{transform:translateY(8px)}}
+
+/* Sections */
+.sec{padding:clamp(3.5rem,8vw,6.5rem) 0}
+.tint{background:var(--mist)}
+h2{font:700 clamp(1.9rem,4vw,2.9rem)/1.15 var(--serif);color:var(--head);letter-spacing:-.01em;max-width:22ch;margin-bottom:1rem}
+.intro{max-width:70ch;color:var(--muted);margin-bottom:2.2rem}
+.two{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(2rem,6vw,5rem);align-items:start}
+.sticky{position:sticky;top:96px}
+.quote{margin-top:1.5rem;padding-left:1rem;border-left:4px solid var(--alta);font:500 1.15rem/1.5 var(--serif)}
+
+/* Accordion */
+.acc details{border-bottom:1px solid #cfdcd9}
+.acc summary{cursor:pointer;list-style:none;padding:1.1rem 2rem 1.1rem 0;font:600 1.15rem var(--sans);position:relative}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:"+";position:absolute;right:0;top:.8rem;font-size:1.6rem;color:var(--alta);transition:transform .25s}
+.acc details[open] summary::after{transform:rotate(45deg)}
+.acc p{padding-bottom:1.2rem;color:var(--muted);max-width:60ch}
+
+/* Tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.tabs button{font:600 .98rem var(--sans);padding:.6rem 1.1rem;border-radius:99px;border:1.5px solid var(--river);background:transparent;color:var(--river);cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--river);color:#fff}
+.panel{background:var(--card);border-radius:var(--r);padding:clamp(1.4rem,4vw,2.6rem);border-top:5px solid var(--alta)}
+.panel h3{font:700 1.6rem var(--serif);color:var(--head);margin-bottom:1rem}
+.panel ul{list-style:none;display:grid;gap:1rem;padding:0}
+.panel li{padding-left:1.4rem;position:relative;max-width:75ch}
+.panel li::before{content:"";position:absolute;left:0;top:.65rem;width:8px;height:8px;border-radius:50%;background:var(--marigold)}
+.panel li b{color:var(--head)}
+
+/* Model */
+.tiers{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:t;margin-bottom:4rem}
+.tiers li{position:relative;padding:1.4rem 1.2rem 1.4rem 1.4rem;background:var(--mist);counter-increment:t;
+  clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%,22px 50%)}
+.tiers li:first-child{clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%)}
+.tiers li:nth-child(2){background:#d7e9e5}.tiers li:nth-child(3){background:#bfdcd6}.tiers li:nth-child(4){background:#a4cdc5}
+.tiers li{padding-inline:2.2rem 2.4rem}.tiers li:first-child{padding-left:1.4rem}
+.tiers h3{font:700 1.1rem var(--serif);margin-bottom:.4rem;color:var(--head)}
+.tiers p{font-size:.92rem;line-height:1.5}
+.sub{font:700 1.5rem var(--serif);color:var(--head);margin-bottom:1.2rem}
+.why{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem 3rem}
+.why h4{font:600 1.05rem var(--sans);color:var(--alta);margin-bottom:.2rem}
+.why p{color:var(--muted)}
+
+/* Roadmap */
+.river{height:6px;background:#c6dcd8;border-radius:9px;margin-bottom:-3.4rem;position:relative;top:1.7rem;z-index:0}
+.river span{display:block;height:100%;width:10%;background:var(--river);border-radius:9px;transition:width .5s ease}
+.phases{display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem;position:relative;z-index:1;margin-bottom:1.5rem}
+.phases button{background:var(--paper);border:2px solid var(--river);border-radius:var(--r);padding:.7rem .6rem;text-align:left;font:inherit;cursor:pointer;color:var(--ink)}
+.phases button b{display:block;font:700 1rem var(--serif)}
+.phases button small{color:var(--muted);font-size:.85rem}
+.phases button[aria-selected=true]{background:var(--river);color:#fff}
+.phases button[aria-selected=true] small{color:#d6e6e2}
+.phase-card{background:var(--card);border-radius:var(--r);padding:clamp(1.4rem,4vw,2.4rem);border-left:6px solid var(--marigold)}
+.phase-card h3{font:700 1.5rem var(--serif);color:var(--head);margin-bottom:1rem}
+.phase-card dl{display:grid;gap:.9rem}
+.phase-card dt{font-weight:600;color:var(--head)}
+.phase-card dd{color:var(--muted);max-width:75ch}
+.dep{margin-top:1.2rem;padding:.9rem 1.1rem;background:var(--warn);border-radius:10px;font-size:.98rem}
+
+/* Budget */
+.bars{display:grid;gap:1.1rem}
+.bar button{width:100%;text-align:left;background:none;border:0;font:inherit;color:inherit;cursor:pointer;padding:.3rem 0}
+.bar .row{display:flex;justify-content:space-between;gap:1rem;font-weight:600}
+.bar .track{height:14px;background:var(--mist);border-radius:9px;margin-top:.4rem;overflow:hidden}
+.bar .fill{height:100%;width:0;background:linear-gradient(90deg,var(--river),var(--alta));border-radius:9px;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.bar .more{display:none;margin:.4rem 0 .6rem;color:var(--muted);font-size:.97rem;max-width:80ch}
+.bar.open .more{display:block}
+.total{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:2rem;padding-top:1.2rem;border-top:2px solid var(--mangrove)}
+.total span{font-weight:600}.total strong{font:700 1.8rem var(--serif);color:var(--alta)}
+
+/* Contact */
+address{font-style:normal;margin-top:1.5rem;line-height:1.9}
+form{display:grid;gap:1rem;background:var(--card);padding:clamp(1.2rem,3vw,2rem);border-radius:var(--r)}
+label{display:grid;gap:.3rem;font-weight:600;font-size:.95rem}
+input,textarea{font:inherit;padding:.7rem .9rem;border:1.5px solid #b9cdc9;border-radius:10px;background:var(--paper)}
+input.bad,textarea.bad{border-color:var(--alta)}
+.status{font-size:.95rem;min-height:1.4em}
+.status.err{color:var(--alta)}
+
+footer{background:var(--mangrove);color:#a9cdc6;padding:2rem 0;font-size:.92rem}
+footer p+p{margin-top:.3rem}
+
+/* Theme, progress, extras */
+[data-theme=dark]{--paper:#0a1c19;--ink:#e4efec;--muted:#9fb8b2;--mist:#10302b;--card:#102a26;--head:#bfe3da;--warn:#3a2f10;color-scheme:dark}
+[data-theme=dark] .tiers li{background:#12332e}[data-theme=dark] .tiers li:nth-child(2){background:#17413a}
+[data-theme=dark] .tiers li:nth-child(3){background:#1c4f46}[data-theme=dark] .tiers li:nth-child(4){background:#215c52}
+[data-theme=dark] .acc details{border-color:#25463f}[data-theme=dark] input,[data-theme=dark] textarea{border-color:#2f5750}
+.progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--marigold),var(--alta));z-index:50}
+.icon-btn{background:none;border:1px solid #6f9a93;color:#fff;border-radius:50%;width:38px;height:38px;font-size:1.1rem;cursor:pointer;margin-left:auto;margin-right:.6rem}
+.to-top{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;border:0;background:var(--alta);color:#fff;font-size:1.3rem;cursor:pointer;z-index:15;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.deep{background:var(--mangrove);color:#e4efec}.deep h2{color:#fff}.deep .intro{color:#a9cdc6}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.6rem}
+.chips button{font:600 1rem var(--sans);padding:.7rem 1.2rem;border-radius:99px;border:1.5px solid #6f9a93;background:transparent;color:#fff;cursor:pointer}
+.chips button[aria-selected=true]{background:var(--marigold);border-color:var(--marigold);color:#0e3a33}
+.finder-out{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.finder-out div{border-top:3px solid var(--marigold);padding:.9rem 0 0}
+.finder-out b{display:block;margin-bottom:.2rem}.finder-out span{color:#b9d6cf;font-size:.97rem}
+.calc{background:var(--mist);border-radius:var(--r);padding:1.2rem 1.4rem;margin-bottom:2rem}
+.calc label{font-weight:600}.calc input{width:100%;margin:.8rem 0;accent-color:var(--alta);padding:0}
+.note{color:var(--muted);font-size:.93rem}
+.sec.faq{padding-top:0}
+.foot-actions{display:flex;gap:.8rem;flex-wrap:wrap;background:var(--mangrove);padding:0 4% 1.5rem;width:100%}
+.foot-actions .btn{padding:.5rem 1.1rem;font-size:.92rem}
+@media print{.nav,.progress,.waves,form,.to-top,.foot-actions,.icon-btn,.calc,.skip,.actions{display:none!important}
+  body{color:#000;background:#fff}.hero,.deep,footer{background:#fff!important;color:#000!important}h1,.deep h2,.lead,.glance dd{color:#000!important}
+  .sec{padding:1.2rem 0}.bar .more{display:block}.bar .fill{width:100%!important}}
+
+/* Responsive */
+@media(max-width:900px){
+  .two{grid-template-columns:1fr}.sticky{position:static}
+  .tiers{grid-template-columns:1fr;gap:.5rem}
+  .tiers li,.tiers li:first-child{clip-path:none;border-radius:var(--r);padding:1.2rem}
+  .phases{grid-template-columns:1fr 1fr}.river{display:none}
+  .why{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;background:var(--mangrove);padding:1rem 4% 1.4rem}
+  .links.open{display:flex}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}html{scroll-behavior:auto}
+}
+
+.wrap foot-actions button {
+  background-color: orange;
+  border: 5px solid orange;
+}
+
+ </style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="progress" id="progress"></div>
+<header class="nav" id="nav">
+  <a class="brand" href="#top">Lakshmirupa <span>&</span> Mayer Anchal</a>
+  <button class="icon-btn" id="themeBtn" aria-label="Switch to dark theme" title="Switch theme">◐</button>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="links">Menu</button>
+  <nav id="links" class="links" aria-label="Main">
+    <a href="#problem">Problem</a><a href="#solution">Solution</a><a href="#finder">Find help</a>
+    <a href="#model">Model</a><a href="#plan">Roadmap</a><a href="#budget">Budget</a><a href="#faq">FAQ</a>
+    <a href="#contact" class="cta-link">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <p class="tag">Seva First Innovation Challenge 2026 · Women & Child Development</p>
+    <h1>A classroom, <br>not a wedding.</h1>
+    <p class="lead">Lakshmirupa and Mayer Anchal bring health care, schooling and a steady income to adolescent girls in the river-locked villages of the Sundarbans, led by women from those same villages.</p>
+    <div class="actions">
+      <a class="btn primary" href="#solution">See the solution</a>
+      <a class="btn ghost" href="#budget">View the 1-year pilot budget</a>
+    </div>
+    <dl class="glance" aria-label="Pilot at a glance">
+      <div><dt>Villages</dt><dd data-count="10">10</dd></div>
+      <div><dt>Peer leaders</dt><dd data-count="50">50</dd></div>
+      <div><dt>Duration</dt><dd data-count="12" data-suf=" months">12 months</dd></div>
+      <div><dt>Pilot cost</dt><dd data-count="25" data-pre="₹" data-suf=" lakh">₹25 lakh</dd></div>
+    </dl>
+  </div>
+  <svg class="waves" viewBox="0 0 2880 160" preserveAspectRatio="none" aria-hidden="true">
+    <path class="w1" d="M0 80 C240 20 480 140 720 80 S1200 20 1440 80 S1920 140 2160 80 S2640 20 2880 80 V160 H0Z"/>
+    <path class="w2" d="M0 110 C240 60 480 150 720 110 S1200 60 1440 110 S1920 150 2160 110 S2640 60 2880 110 V160 H0Z"/>
+  </svg>
+</section>
+
+<section class="sec" id="problem">
+  <div class="wrap two">
+    <div class="sticky">
+      <h2>Why girls in the Sundarbans are leaving school early</h2>
+      <p>Child marriage and motherhood between ages 10 and 19 harm girls' bodies, minds and futures, and trap families in poverty and ill health. Four forces keep the cycle going.</p>
+      <p class="quote">The Sundarbans delta is cut off by rivers and poor roads. Basic health care and schools are hard to reach.</p>
+    </div>
+    <div class="acc">
+      <details name="prob" open>
+        <summary>Serious risks for mothers and newborns</summary>
+        <p>Early pregnancy raises the risk of anaemia, pre-eclampsia and eclampsia, premature rupture of membranes, severe bleeding and cervical cancer. Newborns face preterm birth, low birth weight, low Apgar scores, stillbirth and death in the first weeks of life.</p>
+      </details>
+      <details name="prob">
+        <summary>Distance, water and hunger</summary>
+        <p>River barriers and missing roads keep girls away from clinics and hospitals. Daily contact with saline water causes chronic skin disease, and long-term malnutrition adds to the harm.</p>
+      </details>
+      <details name="prob">
+        <summary>Silence around family planning</summary>
+        <p>Taboos and secrecy leave girls without knowledge of contraception or their legal rights under the Medical Termination of Pregnancy (MTP) Act. Many turn to unsafe abortions.</p>
+      </details>
+      <details name="prob">
+        <summary>Social pressure and exploitation</summary>
+        <p>Poverty, pressure to continue the family line, religious misconceptions and limited schooling push families toward early marriage. Substance abuse, sexual violence and exposure to pornography among minors raise the danger further.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint" id="solution">
+  <div class="wrap">
+    <h2>Two projects, one village-level system</h2>
+    <p class="intro"><strong>Lakshmirupa</strong> empowers women and adolescent girls. <strong>Mayer Anchal</strong> looks after mothers and children. Together they connect district and block offices to every village through female doctors, nurses, ASHA and Anganwadi workers, and five educated local girls per village.</p>
+
+    <div class="tabs" role="tablist" aria-label="Solution areas" id="tabs"></div>
+    <div class="panel" id="panel" role="tabpanel" tabindex="0"></div>
+  </div>
+</section>
+
+<section class="sec deep" id="finder">
+  <div class="wrap">
+    <h2>Find the support that fits</h2>
+    <p class="intro">Choose the situation closest to yours to see which services and protections apply.</p>
+    <div class="chips" id="chips" role="tablist" aria-label="Situations"></div>
+    <div class="finder-out" id="finderOut" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="sec" id="model">
+  <div class="wrap">
+    <h2>How support reaches an island household</h2>
+    <p class="intro">A four-level delivery model carries policy and medical expertise from the block office to the courtyard.</p>
+    <ol class="tiers">
+      <li><h3>Government and NGOs</h3><p>District and block authorities with local NGOs supply funding, legal backing, medical supplies and training resources.</p></li>
+      <li><h3>Village health team</h3><p>Trained female doctors, nurses, ASHA and Anganwadi workers hold clinics and follow up on care.</p></li>
+      <li><h3>Five peer leaders</h3><p>Educated local girls who guide daily routines and act as trusted bridges to health workers.</p></li>
+      <li><h3>Mothers and daughters</h3><p>Open courtyard meetings (<em>Uthon Boithok</em>) make reproductive health and legal rights ordinary topics.</p></li>
+    </ol>
+
+    <h3 class="sub">Why it suits the Sundarbans</h3>
+    <div class="why">
+      <div><h4>Works through monsoon and river disruption</h4><p>Support lives inside each village, so it continues when boats and roads stop.</p></div>
+      <div><h4>Earns trust with local voices</h4><p>Mothers join the conversation, and female doctors and local peers replace unfamiliar outsiders.</p></div>
+      <div><h4>Low cost, low infrastructure</h4><p>Yoga, safe drinking water and iron and vitamin C-rich local food need little equipment and scale easily.</p></div>
+      <div><h4>Tackles causes together</h4><p>Health care, income and schooling together show families that daughters can be earners, not burdens.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint" id="plan">
+  <div class="wrap">
+    <h2>Twelve months, five phases</h2>
+    <p class="intro">Select a phase to see who does what and what must be finished first.</p>
+    <div class="river" aria-hidden="true"><span id="riverFill"></span></div>
+    <div class="phases" id="phases" role="tablist" aria-label="Project phases"></div>
+    <article class="phase-card" id="phaseCard" aria-live="polite"></article>
+  </div>
+</section>
+
+<section class="sec" id="budget">
+  <div class="wrap">
+    <h2>One-year pilot across 10 villages: ₹25,00,000</h2>
+    <p class="intro">The plan uses existing government infrastructure, such as block administration, community clinics, ASHA and Anganwadi workers and KGBV schools, plus NGO micro-credit networks. Funds go to last-mile delivery, training and community mobilisation.</p>
+    <div class="calc">
+      <label for="vil">Villages covered: <output id="vilOut">10</output></label>
+      <input type="range" id="vil" min="1" max="50" value="10">
+      <p class="note">About <b id="perVil"></b> per village. This estimate assumes every cost line grows in proportion to the number of villages, so real administration costs may differ.</p>
+    </div>
+    <div class="bars" id="bars"></div>
+    <p class="total"><span>Total estimated annual cost</span><strong id="total"></strong></p>
+  </div>
+</section>
+
+<section class="sec faq" id="faq">
+  <div class="wrap two">
+    <div><h2>Common questions</h2><p>Short answers about the programme, the law and how to take part.</p></div>
+    <div class="acc">
+      <details name="faq" open><summary>What do Lakshmirupa and Mayer Anchal each do?</summary><p>Lakshmirupa empowers women and adolescent girls. Mayer Anchal looks after the health of mothers and children. They run together through one village-level system.</p></details>
+      <details name="faq"><summary>Who are the peer leaders?</summary><p>Five educated local girls in each village. They guide daily nutrition and yoga sessions and connect girls with health workers. Each receives a stipend of ₹1,500 a month.</p></details>
+      <details name="faq"><summary>What does the MTP Act allow?</summary><p>Abortion is legal up to 20 weeks, from 20 to 24 weeks in special cases, and beyond 24 weeks for severe fetal abnormalities. The programme directs girls to government-approved hospitals with follow-up care.</p></details>
+      <details name="faq"><summary>Where can I report abuse or a forced marriage?</summary><p>Contact the National Emergency Helpline (999) or the Women’s Affairs department. Villages are linked to both, and the POCSO Act covers abuse of minors.</p></details>
+      <details name="faq"><summary>Can my organisation partner on the pilot?</summary><p>Yes. Government offices, NGOs, health workers and funders can write through the contact form below.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="sec tint" id="contact">
+  <div class="wrap two">
+    <div>
+      <h2>Talk to the applicant</h2>
+      <p>Government offices, NGOs, health workers and funders are invited to partner on the pilot.</p>
+      <address>
+        <strong>Chitra Ghosh</strong><br>
+        Makarampur, Vidyasagarpally, Bolpur,<br>Birbhum, West Bengal 731204<br>
+        <a href="tel:+917029443746">7029443746</a><br>
+        <a href="mailto:chitraghoshpanja@gmail.com">chitraghoshpanja@gmail.com</a>
+      </address>
+    </div>
+    <form id="form" novalidate>
+      <label>Your name<input name="name" required autocomplete="name"></label>
+      <label>Your email<input name="email" type="email" required autocomplete="email"></label>
+      <label>How would you like to help?<textarea name="msg" rows="4" required></textarea></label>
+      <button class="btn primary" type="submit">Send by email</button>
+      <p class="status" id="status" role="status"></p>
+    </form>
+  </div>
+</section> -->
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Lakshmirupa & Mayer Anchal · Project synopsis for the Seva First Innovation Challenge 2026</p>
+    <p>Theme: Shikshit & Kaushal Bharat (Educated & Skilled Bharat) · © <span id="year"></span> Chitra Ghosh</p>
+  </div>
+</footer>
+<div class="wrap foot-actions"><button class="btn ghost" id="shareBtn">Share this page</button><button class="btn ghost" id="printBtn">Print the plan</button></div>
+<button class="to-top" id="toTop" aria-label="Back to top" hidden>↑</button>
+<!-- <script src="script.js"></script> -->
+ <script>
+
+'use strict';
+
+/* ---------- Data (taken from the project synopsis) ---------- */
+const pillars = [
+  { name: 'Health & awareness', title: 'Grassroots health care and reproductive awareness', items: [
+    ['Adolescent-friendly clinics', 'Regular check-ups and stigma-free consultations in the village.'],
+    ['Courtyard meetings (Uthon Boithok)', 'Mothers and daughters talk openly about reproductive health, contraceptives and long-acting reversible contraception (LARC) with trained staff.'],
+    ['Legal abortion literacy', 'Families learn their rights under the MTP Act (1971): up to 20 weeks, 20 to 24 weeks in special cases, and beyond 24 weeks for severe fetal abnormalities. Girls are directed to government-approved hospitals with follow-up care.'],
+    ['Infertility support', 'Medical referrals and counselling for young women facing infertility.'] ]},
+  { name: 'Nutrition & wellness', title: 'A daily routine for body and mind', items: [
+    ['Targeted nutrition', 'Girls aged 10 to 19 learn to eat iron and vitamin C-rich food and drink 8 to 10 glasses of safe water a day to fight anaemia and malnutrition.'],
+    ['Yoga and pranayama', 'Surya Namaskar for circulation and mood, Tadasana for posture, Bhujangasana for back pain, Shavasana for stress relief, and Anulom-Vilom and Bhramari for focus.'],
+    ['Led by peers', 'Five local peer leaders per village guide the daily sessions.'] ]},
+  { name: 'Education & income', title: 'Schooling that continues and skills that earn', items: [
+    ['Keeping girls in school', 'Mandatory higher secondary education, reproductive health lessons in classrooms, and re-enrolment of dropouts through Kasturba Gandhi Balika Vidyalaya (KGBV) and Open Universities.'],
+    ['Vocational training and SHGs', 'NGO partners provide micro-loans and training in tailoring, boutique work, handicrafts, beadwork, alpana design, mushroom cultivation, beekeeping and organic fertiliser.'],
+    ['Financial inclusion', 'Bank accounts, savings habits, and links to local markets and fairs.'] ]},
+  { name: 'Law & protection', title: 'Enforcement that keeps girls safe', items: [
+    ['Preventing child marriage', 'Birth certificates are verified before any marriage, with strict penalties for violations.'],
+    ['Legal safeguards', 'Villages learn about the POCSO Act and the Prevention of Women and Child Oppression Act, and are linked to the National Emergency Helpline (999) and Women’s Affairs departments.'],
+    ['Action on abuse', 'Push for action against sexual violence, substance abuse, minors’ access to pornography and illegal sex-determination clinics.'] ]}
+];
+
+const phases = [
+  { m: 'Months 1–2', n: 'Alignment', t: 'Institutional alignment and village taskforce formation',
+    who: [['Project team and district/block authorities', 'Form partnerships with local government, health departments and NGOs.'],
+          ['Village leaders and ASHA/Anganwadi workers', 'Recruit five educated local girls per village as peer leaders, along with female doctors and nurses.'],
+          ['Legal and administrative bodies', 'Require birth certificate checks before marriage and link villages to the 999 helpline and Women’s Affairs departments.']],
+    dep: 'District and block approval, and onboarding of medical staff and peer leaders, must finish before outreach begins.', end: 17 },
+  { m: 'Months 2–4', n: 'Clinics', t: 'Community sensitisation and adolescent health clinics',
+    who: [['Female doctors, nurses and peer leaders', 'Open adolescent-friendly clinics that screen for anaemia, skin disease and malnutrition, and offer infertility counselling and referrals.'],
+          ['ASHA/Anganwadi workers and mothers', 'Hold courtyard meetings on family planning, LARC and abortion rights under the MTP Act.'],
+          ['Law enforcement and community leaders', 'Run awareness drives on the POCSO Act and the Prevention of Women and Child Oppression Act.']],
+    dep: 'Trust built in courtyard meetings with mothers must come before LARC training and reproductive health services for adolescents.', end: 33 },
+  { m: 'Months 3–6', n: 'Daily routine', t: 'Daily wellness routines and educational re-enrolment',
+    who: [['Peer leaders', 'Lead daily group sessions on nutrition and the yoga and pranayama routine for girls aged 10 to 19.'],
+          ['School authorities and the education department', 'Enforce higher secondary education, add reproductive health lessons and re-enrol dropouts in KGBV and Open Universities.']],
+    dep: 'Active peer leaders and cooperation from schools and KGBV administrators are needed to track dropouts and keep habits going.', end: 50 },
+  { m: 'Months 5–9', n: 'Livelihoods', t: 'Vocational training, financial inclusion and market linkage',
+    who: [['Partner NGOs and self-help groups', 'Provide micro-loans and hands-on and online training in tailoring, handicrafts, mushroom cultivation, beekeeping and more.'],
+          ['Banks and local administration', 'Open personal bank accounts and organise markets and fairs where girls sell their products.']],
+    dep: 'Training and micro-loan disbursement must be complete before market linkage and fair participation.', end: 75 },
+  { m: 'Months 9–12+', n: 'Follow-up', t: 'Monitoring, post-care follow-up and scaling',
+    who: [['Medical staff and ASHA workers', 'Follow up on maternal care, safe abortions (watching for bleeding, pain or fever) and newborn health.'],
+          ['District/block officials and project team', 'Measure fewer child marriages, lower dropout rates and fewer maternal and newborn complications, then extend the model to more Sundarbans blocks.']],
+    dep: 'Consistent village-level data from ASHA workers and peer leaders is needed to show impact and secure continued government support.', end: 100 }
+];
+
+const budget = [
+  { name: 'Grassroots human resources and stipends', amt: 1140000, d: 'Stipends for 50 peer leaders (5 girls × 10 villages at ₹1,500 a month for daily mobilisation, yoga and nutrition tracking), plus travel and session allowances for visiting female doctors and nurses at fortnightly village camps.' },
+  { name: 'Vocational training and livelihood support', amt: 450000, d: 'Hands-on and online workshops in tailoring, boutique work, beadwork, alpana, mushroom cultivation, beekeeping and organic fertiliser, plus starter toolkits and market stalls for SHGs.' },
+  { name: 'Adolescent health and reproductive care', amt: 350000, d: 'Setup and consumables for clinics (anaemia tests, skin medication, hygiene kits) and staff training on LARC insertion and removal and MTP Act referrals.' },
+  { name: 'Education re-enrolment and digital access', amt: 200000, d: 'Bridge learning materials, counselling and admission support for KGBV and Open University entry, plus shared tablets and data packs for peer leaders.' },
+  { name: 'Community awareness and courtyard meetings', amt: 180000, d: 'Weekly courtyard meeting logistics and Bengali IEC materials on child marriage law, the POCSO Act, the 999 helpline, nutrition and yoga.' },
+  { name: 'Monitoring, travel and administration', amt: 180000, d: 'River, boat and rural transport across isolated islands, coordination with district and block officials, and impact auditing.' }
+];
+
+const $ = (s, el = document) => el.querySelector(s);
+const inr = n => '₹' + n.toLocaleString('en-IN');
+
+/* ---------- Mobile menu ---------- */
+const menuBtn = $('#menuBtn'), links = $('#links');
+menuBtn.addEventListener('click', () => {
+  const open = links.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', open);
+});
+links.addEventListener('click', e => { if (e.target.tagName === 'A') { links.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); } });
+
+/* ---------- Solution tabs ---------- */
+const tabs = $('#tabs'), panel = $('#panel');
+function showPillar(i) {
+  [...tabs.children].forEach((b, k) => b.setAttribute('aria-selected', k === i));
+  const p = pillars[i];
+  panel.innerHTML = `<h3>${p.title}</h3><ul>${p.items.map(([a, b]) => `<li><b>${a}.</b> ${b}</li>`).join('')}</ul>`;
+}
+pillars.forEach((p, i) => {
+  const b = document.createElement('button');
+  b.role = 'tab'; b.textContent = p.name;
+  b.addEventListener('click', () => showPillar(i));
+  b.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      const n = (i + (e.key === 'ArrowRight' ? 1 : pillars.length - 1)) % pillars.length;
+      showPillar(n); tabs.children[n].focus();
+    }
+  });
+  tabs.append(b);
+});
+showPillar(0);
+
+/* ---------- Roadmap ---------- */
+const phaseWrap = $('#phases'), card = $('#phaseCard'), fill = $('#riverFill');
+function showPhase(i) {
+  [...phaseWrap.children].forEach((b, k) => b.setAttribute('aria-selected', k === i));
+  const p = phases[i];
+  fill.style.width = p.end + '%';
+  card.innerHTML = `<h3>${p.t}</h3><dl>${p.who.map(([a, b]) => `<div><dt>${a}</dt><dd>${b}</dd></div>`).join('')}</dl><p class="dep"><b>Must happen first:</b> ${p.dep}</p>`;
+}
+phases.forEach((p, i) => {
+  const b = document.createElement('button');
+  b.role = 'tab'; b.innerHTML = `<b>${p.n}</b><small>${p.m}</small>`;
+  b.addEventListener('click', () => showPhase(i));
+  phaseWrap.append(b);
+});
+showPhase(0);
+
+/* ---------- Budget bars (animate once when scrolled into view) ---------- */
+const bars = $('#bars'), max = Math.max(...budget.map(b => b.amt));
+budget.forEach(b => {
+  const el = document.createElement('div');
+  el.className = 'bar';
+  el.innerHTML = `<button aria-expanded="false"><span class="row"><span>${b.name}</span><span class="amt" data-base="${b.amt}">${inr(b.amt)}</span></span><span class="track"><span class="fill" data-w="${(b.amt / max * 100).toFixed(1)}"></span></span></button><p class="more">${b.d}</p>`;
+  const btn = $('button', el);
+  btn.addEventListener('click', () => { const o = el.classList.toggle('open'); btn.setAttribute('aria-expanded', o); });
+  bars.append(el);
+});
+const vil = $('#vil');
+function recalc() {
+  const v = +vil.value; let t = 0;
+  $('#vilOut').textContent = v;
+  bars.querySelectorAll('.amt').forEach(a => { const n = Math.round(a.dataset.base * v / 10 / 1000) * 1000; t += n; a.textContent = inr(n); });
+  $('#total').textContent = inr(t); $('#perVil').textContent = inr(Math.round(t / v / 1000) * 1000);
+}
+vil.addEventListener('input', recalc); recalc();
+const fills = () => bars.querySelectorAll('.fill').forEach(f => f.style.width = f.dataset.w + '%');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { fills(); io.disconnect(); } }, { threshold: .3 });
+  io.observe(bars);
+} else fills();
+
+/* ---------- Active nav link ---------- */
+if ('IntersectionObserver' in window) {
+  const spy = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) links.querySelectorAll('a').forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  document.querySelectorAll('main section[id]').forEach(s => spy.observe(s));
+}
+
+/* ---------- Contact form (opens the visitor's email app) ---------- */
+const form = $('#form'), status = $('#status');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const f = new FormData(form), name = f.get('name').trim(), email = f.get('email').trim(), msg = f.get('msg').trim();
+  let ok = true;
+  [['name', name], ['email', /^\S+@\S+\.\S+$/.test(email)], ['msg', msg]].forEach(([k, v]) => {
+    const bad = !v; form.elements[k].classList.toggle('bad', bad); if (bad) ok = false;
+  });
+  status.className = 'status' + (ok ? '' : ' err');
+  if (!ok) { status.textContent = 'Please fill in every field with a valid email address.'; return; }
+  const body = `${msg}\n\nFrom: ${name} (${email})`;
+  location.href = `mailto:chitraghoshpanja@gmail.com?subject=${encodeURIComponent('Partnership enquiry: Lakshmirupa & Mayer Anchal')}&body=${encodeURIComponent(body)}`;
+  status.textContent = 'Opening your email app. Send the message to complete your enquiry.';
+});
+
+$('#year').textContent = new Date().getFullYear();
+
+/* ---------- Support finder ---------- */
+const cases = {
+  'I am a girl in school': [['Adolescent clinics', 'Stigma-free check-ups for anaemia, skin disease and malnutrition.'], ['Daily wellness', 'Nutrition guidance, safe water and yoga led by peer leaders.'], ['Reproductive health lessons', 'Taught in school so questions get honest answers.']],
+  'I left school': [['Re-enrolment', 'Return through Kasturba Gandhi Balika Vidyalaya or Open Universities.'], ['Skills and micro-loans', 'Tailoring, handicrafts, mushroom cultivation, beekeeping and more through NGO partners.'], ['Savings', 'A personal bank account and links to local markets and fairs.']],
+  'I fear an early marriage or pregnancy': [['Birth certificate check', 'Age is verified before any marriage, with strict penalties for violations.'], ['Helpline 999', 'The National Emergency Helpline and Women’s Affairs departments.'], ['Peer leader and clinic', 'Speak to a trusted local girl or a female doctor or nurse.']],
+  'I am a mother or family member': [['Courtyard meetings', 'Uthon Boithok sessions on family planning, LARC and legal rights.'], ['Safe abortion information', 'MTP Act limits explained, with referral to government-approved hospitals.'], ['Daughters as earners', 'Training and income options that show the value of keeping girls in school.']]
+};
+const chips = $('#chips'), fOut = $('#finderOut');
+function showCase(k) {
+  [...chips.children].forEach(b => b.setAttribute('aria-selected', b.textContent === k));
+  fOut.innerHTML = cases[k].map(([a, b]) => `<div><b>${a}</b><span>${b}</span></div>`).join('');
+}
+Object.keys(cases).forEach(k => { const b = document.createElement('button'); b.role = 'tab'; b.textContent = k; b.addEventListener('click', () => showCase(k)); chips.append(b); });
+showCase(Object.keys(cases)[0]);
+
+/* ---------- Hero counters ---------- */
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('[data-count]').forEach(el => {
+    const end = +el.dataset.count, pre = el.dataset.pre || '', suf = el.dataset.suf || '', t0 = performance.now();
+    (function tick(t) {
+      const p = Math.min((t - t0) / 1400, 1);
+      el.textContent = pre + Math.round(end * (1 - Math.pow(1 - p, 3))) + suf;
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  });
+}
+
+/* ---------- Theme toggle (remembered in this browser) ---------- */
+const themeBtn = $('#themeBtn'), root = document.documentElement;
+function setTheme(t) {
+  root.dataset.theme = t;
+  themeBtn.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+  try { localStorage.setItem('theme', t); } catch (e) {}
+}
+let saved = null; try { saved = localStorage.getItem('theme'); } catch (e) {}
+setTheme(saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+themeBtn.addEventListener('click', () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
+
+/* ---------- Scroll progress and back to top ---------- */
+const prog = $('#progress'), toTop = $('#toTop');
+addEventListener('scroll', () => {
+  const h = document.documentElement.scrollHeight - innerHeight;
+  prog.style.width = (h > 0 ? scrollY / h * 100 : 0) + '%';
+  toTop.hidden = scrollY < 600;
+}, { passive: true });
+toTop.addEventListener('click', () => scrollTo({ top: 0 }));
+
+/* ---------- Share and print ---------- */
+const shareBtn = $('#shareBtn');
+shareBtn.addEventListener('click', async () => {
+  const data = { title: document.title, url: location.href };
+  try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); shareBtn.textContent = 'Link copied'; setTimeout(() => shareBtn.textContent = 'Share this page', 2000); } } catch (e) {}
+});
+$('#printBtn').addEventListener('click', () => print());
+addEventListener('beforeprint', () => { document.querySelectorAll('details').forEach(d => d.open = true); fills(); });
+
+ </script>
+</body>
+</html>
